@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --background: #070812;
+  --foreground: #f7f3ee;
+  --panel: rgba(11, 13, 24, 0.72);
+  --panel-strong: rgba(11, 13, 24, 0.9);
+  --line: rgba(255, 255, 255, 0.16);
+  --accent: #ff9f6e;
+  --accent-soft: #ffc49e;
+  --night-blue: #10182f;
+  --night-pink: #8e4b68;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-panel: var(--panel);
+  --color-panel-strong: var(--panel-strong);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-night-blue: var(--night-blue);
+  --color-night-pink: var(--night-pink);
+  --font-sans: var(--font-body);
+  --font-title: var(--font-title);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(255, 178, 114, 0.18), transparent 30%),
+    linear-gradient(180deg, #101323 0%, #070812 58%, #05060c 100%);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-shadow-soft {
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+}
